@@ -100,6 +100,9 @@ The shown belows are i have use to develop.
 
   #### Edit Article 
   ![Login](/images/edit.PNG)
+  
+  #### Delete Article 
+  ![Login](/images/deleteArticle.PNG)
 
   #### Logout 
   ![Login](/images/logout.PNG)
