@@ -1,0 +1,73 @@
+
+<div class="center">
+<article class="leaderboard">
+  <header><center>
+<%= form_with model: article do |form| %>
+     
+    <div>
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+      <% article.errors.full_messages_for(:title).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+  
+    <div>
+      <%= form.label :body %><br>
+      <%= form.text_area :body %><br>
+      <% article.errors.full_messages_for(:body).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    
+  
+    <div>
+      <%= form.submit %>
+
+    </div>
+     <div class="hidden" >
+    <%= form.label :status %><br>
+     <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+   </div>
+  <% end %>
+  </center>
+  </header>
+  </article>
+
+
+  
+<style>
+.vertical-center-index {
+    margin: 0;
+    position: absolute;
+    
+    top: 20%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  // bare minimuu styles
+body {
+  margin: 0;
+  background-color: #eaeaea;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.leaderboard {
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, .4);
+}
+
+
+
+
+
+.leaderboard {
+  max-width: 490px;
+  width: 100%;
+  border-radius: 12px;
+}
+</style>

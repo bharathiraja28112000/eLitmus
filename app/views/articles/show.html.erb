@@ -1,0 +1,121 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+<div class="w3-container w3-cursive">
+<div class="vertical-center-index">
+<center><h1 class="w3-container w3-cursive"><h1><%= @article.title %></h1></center>
+
+
+
+<% if @article.userid == session[:user_id] %>
+
+<div style="color: black;
+padding: 3px 5px;
+text-align: center;
+text-decoration: none;
+display: inline-block;">
+  <%= link_to "Edit", edit_article_path(@article) %>
+</div>
+
+<div style="color: black;
+padding: 3px 5px;
+text-align: center;
+text-decoration: none;
+display: inline-block;">
+  <%= link_to "Destroy", article_path(@article),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+   
+
+<% end %>
+</div>
+<div style="color: black;
+padding: 3px 5px;
+text-align: center;
+text-decoration: none;
+display: inline-block;">
+  <%= link_to "Back", index_path %>
+</div>
+</div>
+</body>
+
+
+<div class="center">
+
+<article class="leaderboard">
+ 
+  <header>
+  <h3 class="w3-container w3-cursive">Article Description</h3>
+  <p class="w3-container w3-cursive"><%= @article.body %></></header>
+  </article>
+
+  <article class="leaderboard">
+  <header><ul>
+  <h5 class="w3-container w3-cursive"><b>Add a comment:</b></h5>
+  <%= render 'comments/form' %>
+  
+  <h5 class="w3-container w3-cursive"><b>Comments</b></h5>
+<%#= render @article.comments %>
+<% @article.comments.each do |comment| %>
+  <p>
+    <strong><%= comment.commenter %></strong>
+    
+
+    <%= comment.body %>
+  </p>
+<% end %>
+
+</ul>
+</header>
+</article>
+</div>
+
+
+<style>
+
+  // bare minimuu styles
+body {
+  margin: 0;
+  background-color: #eaeaea;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.leaderboard {
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, .4);
+}
+
+.leaderboard {
+  max-width: 490px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+
+ul {
+  line-height: 2.2;
+}
+
+ul li {
+  list-style-type: none;
+  counter-increment: item;
+}
+
+ul li:before {
+  content: counter(item);
+  display: inline-block;
+  width: 12px;
+  height: 20px;
+  font-family: "Indie Flower", cursive;
+  margin-right: 5px;
+  background-color: #f9dd94;
+  color: #7eb4e2;
+  font-weight: bold;
+  font-size: 140%;
+  padding: 0 8px 8px;
+  border-radius: 3px;
+  line-height: 1.3;
+}
+</style>

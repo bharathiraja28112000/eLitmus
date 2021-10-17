@@ -1,0 +1,57 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+
+
+<div class="w3-container w3-cursive">
+ 
+  <div class="vertical-center">
+   
+  <%#=  <img src="/assets/login.png" width=100px height=100px><br> # %>
+  
+  <center>  <h1 style="color:orange" >Log In</h1> </center> 
+   
+    <%= form_tag '/login' do %>
+        <center>
+        <p class="w3-large" style="color:white">username</p> <%= text_field_tag :username %><br>
+        <p class="w3-large" style="color:white">password</p> <%= password_field_tag :password %><br><br>
+        </center>
+        
+        <%= submit_tag "Log In" %>&emsp;
+        <div style="background-color: white;
+        color: black;
+        padding: 3px 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;">
+        <%= link_to "SignUp", signup_path %>
+        </div>
+
+    <% end %>
+    
+   </div>
+
+</div>
+
+</body>
+
+
+
+<style>
+body, h2{
+    background-image: url("https://bharathiraja-blog.000webhostapp.com/images/cartoon.jpeg") ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+    font-family: "Indie Flower", cursive;     
+}
+
+h1{
+  font-family: "Indie Flower", cursive; 
+}
+
+
+</style>

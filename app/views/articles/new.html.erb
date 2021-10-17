@@ -1,0 +1,46 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+<div class="w3-container w3-cursive">
+<div class="vertical-center-index">
+<center><h1 class="w3-container w3-cursive"> New Ads</h1></center>
+
+<div style="color: black;
+padding: 3px 5px;
+text-align: center;
+text-decoration: none;
+display: inline-block;">
+<%= link_to "Back", index_path %>
+</div>
+</body>
+<%= render "form", article: @article %>
+
+
+
+
+
+
+<style>
+
+
+  // bare minimuu styles
+body {
+  margin: 0;
+  background-color: #eaeaea;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.leaderboard {
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, .4);
+}
+
+
+.leaderboard {
+ 
+  width: 150%;
+  border-radius: 12px;
+}
+

@@ -1,0 +1,45 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+
+
+<div class="w3-container w3-cursive">
+ 
+  <div class="vertical-center">
+   <center>
+  <%#=  <img src="/assets/login.png" width=100px height=100px><br> # %>
+    <h1 style="color:orange">Log In</h1>
+     
+   
+    <%= form_tag '/login' do %>
+        <p class="w3-large" style="color:white">username</p> <%= text_field_tag :username %><br>
+        <p class="w3-large" style="color:white">password</p> <%= password_field_tag :password %><br><br>
+        </center>
+        <%= submit_tag "Log In" %>&emsp;
+        
+        <%= link_to "SignUp", signup_path %>
+        
+
+    <% end %>
+    
+   </div>
+
+</div>
+
+</body>
+
+
+
+<style>
+body, h2{
+    background-image: url("/assets/cartoon.jpg") ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+    font-family: "Courier New", monospace;     
+}
+
+</style>
