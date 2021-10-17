@@ -47,20 +47,20 @@ The shown belows are i have use to develop.
 
 ### Installation
 
-1. Clone the repo
+  1. Clone the repo
    ```sh
-   git clone https://github.com/bharathiraja28/article.git
+   git clone https://github.com/bharathiraja28112000/eLitmus.git
    ```
    
-2. Install Bundle
+  2. Install Bundle
    ```sh
    bundle install
    ```
-3. Update Bundle
+  3. Update Bundle
    ```sh
    bundle update
    ```
-4. Migrate Database
+  4. Migrate Database
    ```sh
    rails db:migrate
    ```
@@ -71,8 +71,38 @@ The shown belows are i have use to develop.
    ```sh
    rails s
    ```
-## Contact
+   
+### Contact
 
-BharathiRaja R - [https://bharathiraja-blog.000webhostapp.com/](https://bharathiraja-blog.000webhostapp.com/)
+   BharathiRaja R - [https://bharathiraja-blog.000webhostapp.com/](https://bharathiraja-blog.000webhostapp.com/)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+   <p align="right">(<a href="#top">back to top</a>)</p>
+   
+### Output 
+
+  #### Login <br>
+  <img src="/images/login.PNG">
+
+  #### Register <br>
+  <img src="/images/register.PNG">
+
+  #### Index
+  ![Login](/images/index.PNG)
+
+  #### Article
+  ![Login](/images/article.PNG)
+
+  #### Comment 
+  ![Login](/images/comment.PNG)
+
+  #### Add Article 
+  ![Login](/images/add.PNG)
+
+  #### Edit Article 
+  ![Login](/images/edit.PNG)
+
+  #### Logout 
+  ![Login](/images/logout.PNG)
+
+  <p align="right">(<a href="#top">back to top</a>)</p>
+
